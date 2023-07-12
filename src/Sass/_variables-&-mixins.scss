@@ -1,0 +1,117 @@
+//🔸 Colors variables
+$primary-color: #f9faf4;
+$primary-color-dark: hsl(76, 35%, 75%); //94
+$light-green: #b1fc03;
+$light-green-hover: #a3e802;
+$green: #009959;
+$dark-green: #086322;
+$purple: #d9d0e7; //76
+$black: #242424;
+$dark-gray: hsl(232, 18%, 40%); //30
+$gray: hsl(232, 17%, 42%);
+
+//🔸  Fonts Variables
+
+@font-face {
+  font-family: "Roundo";
+  src: url("/assets/fonts/Roundo-Variable.woff2") format("woff2"),
+    url("/assets/fonts/Roundo-Variable.woff") format("woff"),
+    url("/assets/fonts/Roundo-Variable.ttf") format("truetype");
+  font-weight: 200 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme";
+  src: url("/assets/fonts/Supreme-Variable.woff2") format("woff2"),
+    url("/assets/fonts/Supreme-Variable.woff") format("woff"),
+    url("/assets/fonts/Supreme-Variable.ttf") format("truetype");
+  font-weight: 100 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+$primary-font: "Sora", sans-serif;
+$secondary-font: "Supreme", sans-serif;
+
+//🔸  Highlight text mixin
+@mixin highlight-text {
+  color: $green;
+  font-family: inherit;
+}
+
+//🔸 top & bottom margin mixin
+@mixin top-and-bottom-margin {
+  margin: 0 auto;
+  padding: 10rem 2.2rem 4rem 2.2rem;
+}
+
+//🔸 Line hover effect mixin
+@mixin line-hover-effect {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background-color: $black;
+    width: 0%;
+    bottom: -5px;
+    right: 0;
+    transition: all 300ms ease;
+  }
+  &:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+//   .link_hover_effect_white:after {
+//     background-color: #b1fc03;
+//   }
+
+//🔸 profile-picture animation
+@keyframes animate-profile-picture {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+//🔸 animate_wave animation
+@keyframes animate_wave {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+//🔸 fade_up animation
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
