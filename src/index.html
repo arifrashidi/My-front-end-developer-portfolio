@@ -11,15 +11,17 @@
     <!-- Links -->
     <link rel="stylesheet" href="./Sass/style.scss">
     <link rel="shortcut icon" href="../assets/logo/Rashidi-logo-icon-dark.avif" type="image/x-icon">
+    <script src="./script.js"></script>
 </head>
 
 <body>
     <section id="landing-page">
         <!--🔸 Nav -->
         <nav>
-            <figure class="nav__logo">
+            <picture class="nav__logo">
+                <source media="(max-width: 650px)" srcset="/assets/logo/Rashidi-logo.avif">
                 <img src="../assets/logo/Rashidi-logo-with-text.avif" alt="Rashidi Logo">
-            </figure>
+            </picture>
             <ul class="nav__links">
                 <li>
                     <a href="#about" class="nav__links__link">About</a>
@@ -34,6 +36,30 @@
                     <a href="mailto:arifshidi01@gmail.com" class="nav__links__link nav__links__link--last">Contact</a>
                 </li>
             </ul>
+
+            <!--🔸 Modal window -->
+            <button class="nav__open-button" onclick="openMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav__menu-backdrop">
+                <button class="nav__menu-backdrop__closed-button" onclick="closeMenu()">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul>
+                    <li>
+                        <a href="#about" onclick="closeMenu()">About</a>
+                    </li>
+                    <li>
+                        <a href="#stack" onclick="closeMenu()">Stack</a>
+                    </li>
+                    <li>
+                        <a href="#projects" onclick="closeMenu()">Projects</a>
+                    </li>
+                    <li>
+                        <a href="" onclick="closeMenu()">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
 
         <!--🔸 header -->
@@ -152,17 +178,15 @@
             <!-- projects -->
             <ul class="projects__container__ul">
                 <!-- Trect -->
-                <li class="projects__container__ul__li">
-                    <a class="projects__container__ul__li__project" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">
+                <li class="projects__container__ul__li" onclick="hyperlink_project_treact()">
+                    <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Treact-website.avif" alt="My first project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
                             <h3>Treact website</h3>
                             <h4>HTML, CSS, Sass, JavaScript, Parcel</h4>
                             <p>
                                 This is a dummy website that provides various React templates that users can use in
-                                their projects. I
-                                am using HTML, CSS, Sass preprocessor, JavaScript, and Parcel build tools to develop
-                                this website.
+                                their projects.
                             </p>
                             <div class="projects__container__ul__li__project__description__links">
                                 <a href="https://github.com/arifrashidi" target="_blank">
@@ -173,19 +197,17 @@
                                 </a>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </li>
                 <!-- Library -->
-                <li class="projects__container__ul__li">
+                <li class="projects__container__ul__li"  onclick="hyperlink_project_library()">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Library-website.avif" alt="My second project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
                             <h3>Library website</h3>
                             <h4>HTML, CSS, JavaScript, Parcel</h4>
                             <p>
-                                This is a dummy e-commerce website for selling digital books. I am using HTML, CSS,
-                                JavaScript, and
-                                the Parcel build tool to develop this website.
+                                This is a dummy e-commerce website for selling digital books.
                             </p>
                             <div class="projects__container__ul__li__project__description__links">
                                 <a href="https://github.com/arifrashidi" target="_blank">
@@ -199,7 +221,7 @@
                     </div>
                 </li>
                 <!-- Guess my number game -->
-                <li class="projects__container__ul__li">
+                <li class="projects__container__ul__li"  onclick="hyperlink_project_guess_number()">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Guess-my-number.avif" alt="My third project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -222,7 +244,7 @@
                     </div>
                 </li>
                 <!-- Pig game -->
-                <li class="projects__container__ul__li">
+                <li class="projects__container__ul__li" onclick="hyperlink_project_pig_game()">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Pig-game.avif" alt="My fourth project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -247,7 +269,7 @@
                     </div>
                 </li>
                 <!-- Countrypedia -->
-                <li class="projects__container__ul__li">
+                <li class="projects__container__ul__li" onclick="hyperlink_project_countrypedia()">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Countrypedia.avif" alt="My fifth project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -276,26 +298,28 @@
 
     <!--🔸 Footer -->
     <footer>
-        <div class="footer__container row">
-            <a href="#" class="footer__container__logo">
-                <figure>
-                    <img src="/assets/logo/Rashidi-logo-white.avif" alt="" />
-                </figure>
-                <span class="footer__container__logo__popper">
-                    <i class="fas fa-arrow-up"></i>
-                </span>
-            </a>
-            <div class="footer__container__links">
-                <a href="https://github.com/arifrashidi"
-                    class="footer__container__links__link" target="_blank">GitHub</a>
-                <a href="https://github.com/arifrashidi"
-                    class="footer__container__links__link" target="_blank">LinkedIn</a>
-                <a href="mailto:arifshidi01@gmail.com"
-                    class="footer__container__links__link" target="_blank">Email</a>
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" class="footer__container__links__link"
-                    target="_blank">Resume</a>
+        <div class="footer__container">
+            <div class="footer__container__top">
+                <a href="#" class="footer__container__top__logo">
+                    <figure>
+                        <img src="/assets/logo/Rashidi-logo-line.avif" alt="" />
+                    </figure>
+                    <span class="footer__container__top__logo__popper">
+                        <i class="fas fa-arrow-up"></i>
+                    </span>
+                </a>
+                <div class="footer__container__top__links">
+                    <a href="https://github.com/arifrashidi" class="footer__container__top__links__link"
+                        target="_blank">GitHub</a>
+                    <a href="https://github.com/arifrashidi" class="footer__container__top__links__link"
+                        target="_blank">LinkedIn</a>
+                    <a href="mailto:arifshidi01@gmail.com" class="footer__container__top__links__link"
+                        target="_blank">Email</a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+                        class="footer__container__links__link" target="_blank">Resume</a>
+                </div>
             </div>
-            <div class="footer__container__copyright">©2023 Arif Rashidi.</div>
+            <div class="footer__copyright">©2023 Arif Rashidi.</div>
         </div>
     </footer>
 

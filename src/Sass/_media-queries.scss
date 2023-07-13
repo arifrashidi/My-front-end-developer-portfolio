@@ -1,1 +1,101 @@
 
+
+//🔸 Responsive - Nav - change logo image in nav logo  
+
+@media (max-width: 650px) {
+    .nav__logo img {
+        width: 3.4rem !important;
+    }
+}
+
+//🔸 Responsive - Header - Profile Image  
+
+@media (max-width: 400px) {
+    .header__container__profile-picture {
+        width: 16rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .stack-name {
+        font-size: 1.4rem !important;
+    }
+}
+
+
+//🔸 Responsive - Projects - Project simplified description 
+
+@media (max-width: 720px) {
+
+    .projects__container__ul__li {
+        &:hover .projects__container__ul__li__project__description, 
+        &:active .projects__container__ul__li__project__description {
+            transform: translate(-50%, -50%) !important;
+        }
+    }
+
+    .projects__container__ul__li__project__description {
+        left: 50% !important;
+        padding: 0 2.2rem;
+
+        & h3, & h4, & p {
+            text-align: center;
+        }
+        & h3 {
+            font-size: 1.8rem !important;
+        }
+        & h4 {
+            font-size: 1.4rem !important;
+            margin-bottom: 0.8rem !important;
+        }
+        & p {
+            display: none !important;
+        }
+    }
+    .projects__container__ul__li__project__description__links {
+        text-align: center;
+    }
+}
+
+//🔸 Responsive - Footer - Change flex direction  
+
+@media (max-width: 600px) {
+    footer {
+        padding: 6rem 2.2rem 0.1rem 2.2rem !important;
+
+        .footer__copyright {
+            text-align: center;
+        }
+    }
+
+    .footer__container__top {
+        flex-direction: column;
+
+        .footer__container__top__logo {
+            margin-bottom: 2.8rem;
+        }
+
+        .footer__container__top__links {
+            & a {
+                margin-left: 1.2rem !important;
+                margin-right: 1.2rem;
+                font-size: 1.4rem !important;
+            }
+        }
+    }
+}
+@media (max-width: 460px) {
+    .footer__container__top__logo {
+        margin-bottom: 4rem !important;
+    }
+
+    .footer__container__top__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & a {
+            margin-bottom: 3.4rem;
+        }
+    }
+}

@@ -18,15 +18,15 @@ html {
   line-height: 1.5;
 }
 p, div, a {
-  font-size: 1.8rem;
+  font-size: clamp(1.6rem, 3vw, 1.8rem);
 }
 h1 {
-  font-size: 3.8rem;
+  font-size: clamp(3rem, 6vw ,3.8rem);
   font-family: f.$primary-font;
   font-weight: 800;
 }
 h2 {
-  font-size: 3rem;
+  font-size: clamp(2.6rem, 5vw ,3rem);
   font-family: f.$primary-font;
   text-align: center;
   font-weight: 800;
@@ -60,21 +60,25 @@ body {
 
   //🔸 Nav 
   nav {
-    height: 10rem;
+    height: 12rem;
     width: 100%;
     max-width: 100rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 2.6rem;
     
     //- Nav logo
     .nav__logo {
+      // width: 12rem;
+
+      & img {
       width: 12rem;
-    }
-    .nav__logo img {
-      width: 100%;
+      }
+      // & source {
+      //   width: 100%;
+      // }
     }
 
     //- Nav Links
@@ -138,7 +142,7 @@ body {
       }  
 
       .header__container__p {
-        font-size: 1.9rem;
+        font-size: clamp(1.8rem, 3vw, 1.9rem);
         margin-bottom: 2.8rem;
         text-align: center;
         animation: fade_up 650ms 600ms backwards;
@@ -164,7 +168,8 @@ body {
     }
 
     .header__programmer-image {
-      width: 60vw;
+      // width: 60vw;
+      width: clamp(30rem, 70vw, 90rem);
       margin-bottom: 2.4rem;
       & lottie-player {
         width: 100%;
@@ -200,7 +205,7 @@ body {
     @include f.top-and-bottom-margin;
 
     & h2 {
-      margin-bottom: 4rem;
+      margin-bottom: clamp(2rem, 4vw, 4rem);
       & span {
         @include f.highlight-text;
       }
@@ -216,7 +221,7 @@ body {
         display: flex;
         justify-content: center;
         position: relative;
-        margin: 0.5rem;
+        padding: clamp(0.2rem, 0.1vw ,1rem);
 
         .stack__container__icons__icon__image {
 
@@ -263,20 +268,23 @@ body {
     @include f.top-and-bottom-margin;
 
     & h2 {
-      margin-bottom: 6rem;
+      margin-bottom: clamp(4rem, 6vw, 6rem);
       & span {
         @include f.highlight-text;
       }
     }
 
     .projects__container__ul {
+      margin-bottom: 14rem;
 
       .projects__container__ul__li {
-        margin-bottom: 11rem;
+        margin-bottom: clamp(5rem, 12vw, 11rem);
 
         // each project
         .projects__container__ul__li__project {
           display: flex;
+          align-items: center;
+          justify-content: center;
           box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.45);
           border-radius: 2rem;
           overflow: hidden;
@@ -300,10 +308,11 @@ body {
           }
 
           .projects__container__ul__li__project__description {
+            width: 100%;
             position: absolute;
             top: 50%;
             left: 8rem;
-            transform: translateY(100%);
+            transform: translate(0, 100%);
             max-width: 50rem;
             z-index: 10;
             opacity: 0;
@@ -350,10 +359,74 @@ body {
         &:hover .projects__container__ul__li__project__description, 
         &:active .projects__container__ul__li__project__description {
           opacity: 1;
-          transform: translateY(-50%);
+          transform: translate(0, -50%);
         }
       }
     }
 
+  }
+}
+
+//🔸 footers 
+
+footer {
+  background-color: f.$dark-green;
+  padding: 6rem 5rem 0.1rem 5rem;
+
+  .footer__container {
+    width: 100%;
+    max-width: 100rem;
+    margin: auto;
+
+    .footer__container__top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4rem;
+      border-bottom-color: f.$dark-green-light;
+      border-bottom-style: solid;
+      border-bottom-width: 0.1rem;
+  
+      .footer__container__top__logo {
+        position: relative;
+        & figure {
+          width: 3rem;
+          & img {
+            width: 100%;
+          }
+        }
+        .footer__container__top__logo__popper {
+          position: absolute;
+          color: f.$primary-color;
+          right: 50%;
+          top: -1rem;
+          font-weight: 600;
+          opacity: 0;
+          transition: all 300ms ease;
+          & i {
+            font-size: 2rem;
+          }
+        }
+        &:hover .footer__container__top__logo__popper {
+          transform: translateX(4rem);
+          opacity: 1;
+        }
+      }
+  
+      .footer__container__top__links {
+        & a {
+          color: f.$primary-color;
+          margin-left: 2.4rem;
+          font-size: 1.6rem;
+          @include f.line-hover-effect(0.24rem, f.$light-green);
+        }
+      }
+    }
+  
+    .footer__copyright {
+      color: f.$primary-color;
+      margin: 4rem 0 4rem 0;
+      font-size: 1.4rem;
+    }
   }
 }
