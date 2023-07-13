@@ -51,9 +51,11 @@
         & p {
             display: none !important;
         }
-    }
-    .projects__container__ul__li__project__description__links {
-        text-align: center;
+
+        .projects__container__ul__li__project__description__links {
+            text-align: center;
+            display: none !important;
+        }
     }
 }
 
