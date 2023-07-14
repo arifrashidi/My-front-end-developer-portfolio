@@ -11,6 +11,9 @@ html {
 * {
   font-family: f.$secondary-font, Arial, sans-serif;
 }
+*:focus {
+  outline: none;
+}
 *, *::before, *::after {
   box-sizing: inherit;
   padding: 0;
@@ -72,14 +75,10 @@ body {
     
     //- Nav logo
     .nav__logo {
-      // width: 12rem;
 
       & img {
       width: 12rem;
       }
-      // & source {
-      //   width: 100%;
-      // }
     }
 
     //- Nav Links
@@ -275,7 +274,7 @@ body {
       margin-bottom: 14rem;
 
       .projects__container__ul__li {
-        margin-bottom: clamp(5rem, 12vw, 11rem);
+        margin-bottom: clamp(4rem, 10vw, 11rem);
 
         // each project
         .projects__container__ul__li__project {

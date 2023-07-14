@@ -72,10 +72,8 @@ $secondary-font: "Supreme", sans-serif;
     width: 100%;
     left: 0;
   }
+
 }
-//   .link_hover_effect_white:after {
-//     background-color: #b1fc03;
-//   }
 
 //🔸 profile-picture animation  
 @keyframes animate-profile-picture {
@@ -155,11 +153,10 @@ nav {
       background-color: transparent;
       border: none;
       position: absolute;
-      right: 2.8rem;
-      top: 2.8rem;
-      padding: 8px;
+      right: 2.4rem;
+      top: 3rem;
       color: white;
-      font-size: 3.6rem;
+      font-size: 3.7rem;
     }
 
     & ul {

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arif Rashidi</title>
+    <title>Arif Rashidi | Frontend developer & Designer</title>
     <!-- Outer sources -->
     <script src="https://kit.fontawesome.com/b7ef072d61.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- Links -->
     <link rel="stylesheet" href="./Sass/style.scss">
     <link rel="shortcut icon" href="../assets/logo/Rashidi-logo-icon-dark.avif" type="image/x-icon">
-    <script src="./script.js"></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -38,25 +38,25 @@
             </ul>
 
             <!--🔸 Modal window -->
-            <button class="nav__open-button" onclick="openMenu()">
+            <button class="nav__open-button nav_open_window_button">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="nav__menu-backdrop">
-                <button class="nav__menu-backdrop__closed-button" onclick="closeMenu()">
+                <button class="nav__menu-backdrop__closed-button nav_closed_window_button">
                     <i class="fas fa-times"></i>
                 </button>
                 <ul>
                     <li>
-                        <a href="#about" onclick="closeMenu()">About</a>
+                        <a href="#about" class="nav_closed_window_button">About</a>
                     </li>
                     <li>
-                        <a href="#stack" onclick="closeMenu()">Stack</a>
+                        <a href="#stack" class="nav_closed_window_button">Stack</a>
                     </li>
                     <li>
-                        <a href="#projects" onclick="closeMenu()">Projects</a>
+                        <a href="#projects" class="nav_closed_window_button">Projects</a>
                     </li>
                     <li>
-                        <a href="" onclick="closeMenu()">Contact</a>
+                        <a href="mailto:arifshidi01@gmail.com" class="nav_closed_window_button">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -162,7 +162,8 @@
                     <figure class="stack__container__icons__icon__image">
                         <img src="/assets/stack-icons/parcel-seeklogo.fix.svg" alt="Parcel logo" />
                     </figure>
-                    <span class="stack-name">Parcel</span>                </div>
+                    <span class="stack-name">Parcel</span>
+                </div>
             </div>
         </div>
     </section>
@@ -176,8 +177,8 @@
             </h2>
             <!-- projects -->
             <ul class="projects__container__ul">
-                <!-- Trect -->
-                <li class="projects__container__ul__li" onclick="hyperlink_project_treact()">
+                <!-- Treact -->
+                <li class="projects__container__ul__li treact_hyperlink">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Treact-website.avif" alt="My first project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -199,7 +200,7 @@
                     </div>
                 </li>
                 <!-- Library -->
-                <li class="projects__container__ul__li"  onclick="hyperlink_project_library()">
+                <li class="projects__container__ul__li library_hyperlink">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Library-website.avif" alt="My second project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -220,7 +221,7 @@
                     </div>
                 </li>
                 <!-- Guess my number game -->
-                <li class="projects__container__ul__li"  onclick="hyperlink_project_guess_number()">
+                <li class="projects__container__ul__li guess_number_hyperlink">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Guess-my-number.avif" alt="My third project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -243,7 +244,7 @@
                     </div>
                 </li>
                 <!-- Pig game -->
-                <li class="projects__container__ul__li" onclick="hyperlink_project_pig_game()">
+                <li class="projects__container__ul__li pig_game_hyperlink">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Pig-game.avif" alt="My fourth project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -268,7 +269,7 @@
                     </div>
                 </li>
                 <!-- Countrypedia -->
-                <li class="projects__container__ul__li" onclick="hyperlink_project_countrypedia()">
+                <li class="projects__container__ul__li countrypedia_hyperlink">
                     <div class="projects__container__ul__li__project">
                         <img src="/assets/projects-image/Countrypedia.avif" alt="My fifth project" loading="lazy" />
                         <div class="projects__container__ul__li__project__description">
@@ -321,7 +322,6 @@
             <div class="footer__copyright">©2023 Arif Rashidi.</div>
         </div>
     </footer>
-
 </body>
 
 </html>
