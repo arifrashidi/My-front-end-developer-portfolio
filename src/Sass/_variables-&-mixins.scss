@@ -1,5 +1,6 @@
 
-//🔸 Colors variables 
+
+//🔸 Colors variables
 $primary-color: #f9faf4;
 $primary-color-dark: #cad6a9; //94
 $light-green: #b1fc03;
@@ -12,7 +13,7 @@ $black: #242424;
 $dark-gray: #545978; //30
 $gray: #595e7d;
 
-//🔸 Fonts Variables 
+//🔸 Fonts Variables
 
 @font-face {
   font-family: "Roundo";
@@ -34,19 +35,19 @@ $gray: #595e7d;
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 
 $primary-font: "Sora", sans-serif;
 $secondary-font: "Supreme", sans-serif;
 
-//🔸 Highlight text mixin 
+//🔸 Highlight text mixin
 @mixin highlight-text {
   color: $green;
   font-family: inherit;
 }
 
-//🔸 top & bottom margin mixin 
+//🔸 top & bottom margin mixin
 @mixin top-and-bottom-margin {
   margin: 0 auto;
   // padding: 10rem 2.2rem 4rem 2.2rem;
@@ -55,9 +56,10 @@ $secondary-font: "Supreme", sans-serif;
   padding-left: 2.2rem;
 }
 
-//🔸 Line hover effect mixin 
+//🔸 Line hover effect mixin
 @mixin line-hover-effect($height: 0.24rem, $color: $black) {
   position: relative;
+
   &:after {
     content: "";
     position: absolute;
@@ -68,58 +70,65 @@ $secondary-font: "Supreme", sans-serif;
     right: 0;
     transition: all 300ms ease;
   }
+
   &:hover:after {
     width: 100%;
     left: 0;
   }
-
 }
 
-//🔸 profile-picture animation  
+//🔸 profile-picture animation
 @keyframes animate-profile-picture {
   0% {
     transform: scale(0);
   }
+
   80% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
-//🔸 animate_wave animation 
+//🔸 animate_wave animation
 @keyframes animate_wave {
   0% {
     transform: rotate(0);
   }
+
   25% {
     transform: rotate(15deg);
   }
+
   50% {
     transform: rotate(0);
   }
+
   75% {
     transform: rotate(-15deg);
   }
+
   100% {
     transform: rotate(0);
   }
 }
 
-//🔸 fade_up animation 
+//🔸 fade_up animation
 @keyframes fade_up {
   0% {
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-//🔸 Modal window features 
+//🔸 Modal window features
 
 nav {
   position: relative;
@@ -139,7 +148,7 @@ nav {
     right: 0;
     bottom: 0;
     left: 0;
-    backdrop-filter: blur(10px) saturate(180%);;
+    backdrop-filter: blur(10px) saturate(180%);
     background-color: #111928bf;
     z-index: 100;
     display: flex;
@@ -174,10 +183,9 @@ nav {
       }
     }
   }
-  
 }
 
-.js-when-button-been-clicked  {
+.js-when-button-been-clicked {
   max-height: 100vh;
   overflow-y: hidden;
 }
@@ -194,5 +202,10 @@ nav {
   .nav__open-button {
     display: inline-block !important;
   }
+}
+
+@mixin Animated-shape-background {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1021%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(217%2c 208%2c 231%2c 1)'%3e%3c/rect%3e%3cpath d='M736.2608404374779 406.69442474809637L773.071475956325 345.431239321796 662.7713800574509 320.8468787566756z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M673.8481945245394 112.69315809337189L695.2030647865828 2.831874526251397 519.7337043048803 25.7302109167465z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1264.293%2c662.235C1310.075%2c662.108%2c1357.278%2c648.436%2c1380.98%2c609.267C1405.409%2c568.898%2c1400.598%2c517.677%2c1376.215%2c477.28C1352.653%2c438.243%2c1309.887%2c415.452%2c1264.293%2c415.942C1219.552%2c416.423%2c1179.69%2c441.399%2c1156.463%2c479.642C1132.232%2c519.539%2c1122.748%2c569.723%2c1146.484%2c609.916C1169.902%2c649.57%2c1218.24%2c662.362%2c1264.293%2c662.235' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1196.031%2c286.234C1237.091%2c287.503%2c1275.986%2c265.987%2c1296.569%2c230.435C1317.193%2c194.812%2c1315.3%2c151.058%2c1295.035%2c115.229C1274.438%2c78.811%2c1237.846%2c51.258%2c1196.031%2c52.677C1156.121%2c54.031%2c1126.594%2c86.225%2c1108.016%2c121.573C1090.898%2c154.144%2c1088.362%2c192.088%2c1105.707%2c224.538C1124.129%2c259.002%2c1156.971%2c285.027%2c1196.031%2c286.234' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M690.5039252383789 275.4038772775538L804.439786409265 397.58512974692843 926.6210388786396 283.64926857604223 812.6851777077535 161.46801610666762z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M839.05%2c697.683C888.973%2c697.536%2c934.972%2c674.065%2c962.669%2c632.53C994.131%2c585.35%2c1014.282%2c525.451%2c987.082%2c475.692C959.072%2c424.451%2c897.447%2c406.55%2c839.05%2c406.382C780.301%2c406.213%2c717.865%2c423.369%2c689.535%2c474.836C661.914%2c525.015%2c682.253%2c585.695%2c714.166%2c633.26C742.137%2c674.949%2c788.847%2c697.83%2c839.05%2c697.683' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1168.368612989428 109.28662070314626L1208.2062583130096 239.58968722402585 1338.5093248338892 199.75204190044428 1298.6716795103075 69.44897537956464z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M271.799%2c573.396C307.156%2c572.599%2c340.726%2c558.086%2c359.982%2c528.422C381.181%2c495.763%2c390.785%2c453.771%2c371.348%2c420.034C351.887%2c386.256%2c310.774%2c376.168%2c271.799%2c375.359C230.957%2c374.511%2c186.011%2c380.82%2c164.826%2c415.748C143.077%2c451.606%2c152.905%2c497.854%2c176.453%2c532.557C197.26%2c563.221%2c234.751%2c574.231%2c271.799%2c573.396' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M436.7001363801696 122.50603943803986L349.96722006953405 168.51677568619965 421.9469452589637 215.26095578048538z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M373.6326122471247 164.7216379426751L313.0149865276757 157.27872938573594 332.15943655199146 251.92662224337903z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1170.8750737935654 238.97827662426022L1110.8711180560354 121.21388272191746 993.1067241536925 181.21783845944765 1053.1106798912226 298.9822323617904z' fill='rgba(226%2c 216%2c 240%2c 1)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1021'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  background-attachment: fixed;
 }
 

@@ -11,6 +11,9 @@
 //🔸 Responsive - Header - Profile Image  
 
 @media (max-width: 400px) {
+    .header__container {
+        margin-top: 0 !important;
+    }
     .header__container__profile-picture {
         width: 16rem !important;
     }
@@ -36,6 +39,9 @@
         &:active .projects__container__ul__li__project__description {
             transform: translate(-50%, -50%) !important;
         }
+    }
+    .projects__container__ul__li__project {
+        box-shadow: 0 0 5rem hsla(0, 0%, 0%, 0.3) !important;
     }
 
     .projects__container__ul__li__project__description {

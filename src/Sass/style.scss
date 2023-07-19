@@ -181,7 +181,7 @@ body {
 
 //🔸 about 
 #about {
-  background-color: f.$purple;
+  @include f.Animated-shape-background;
   border-radius: 6rem;
   padding: 5rem 0 8rem;
 
@@ -281,7 +281,7 @@ body {
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 2rem 8rem rgba(0, 0, 0, 0.45);
+          box-shadow: 0 1rem 8rem hsla(0, 0%, 0%, 0.3);
           border-radius: 2rem;
           overflow: hidden;
           position: relative;
