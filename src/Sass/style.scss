@@ -181,7 +181,7 @@ body {
 
 //🔸 about 
 #about {
-  @include f.Animated-shape-background;
+  @include f.svg-background;
   border-radius: 6rem;
   padding: 5rem 0 8rem;
 
